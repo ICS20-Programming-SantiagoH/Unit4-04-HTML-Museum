@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- metadata -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Museum Admission" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Santiago Hewett" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon code -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    
+    <!-- MDL connector -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css" />
+    <!-- CSS connector -->
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <!-- Title -->
+    <title>Museum Admission</title>
+  </head>
+  <body>
+    
+    <!-- JS connector -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <center>
+    <!-- MDL header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Museum Admission</span>
+        </div>
+      </header>
+      
+      <!-- Movie image -->
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img src="./images/museum_image.jpg" alt="Museum" width="75%" height="auto"/>
+      </main>
+              
+              <!-- Request -->
+              <h5>Enter your age and what day is it today</h5>
+              <!-- Numeric Textfield Age -->
+              <form action=" javascript: enterClicked()">
+                <label for="age">Entre you age:</label>
+                <input type="number" id="age" placeholder="ex.6" step="1" min="0"><br><br>
+                
+                <!-- Numeric Textfield Day Of The Week -->
+              <form action=" javascript: enterClicked()">
+                <label for="dayOfTheWeek">Enter the day of the week:</label>
+                <select name="dayOfTheWeek" id="dayOfTheWeek">
+                  <option value="volvo">Monday</option>
+                  <option value="saab">Tuesday</option>
+                  <option value="mercedes">Wednesday</option>
+                  <option value="audi">Thursday</option>
+                  <option value="saab">Friday</option>
+                  <option value="mercedes">Saturday</option>
+                  <option value="audi">Sunday</option>
+                </select><br><br>
+                
+                <input type="submit" value="Submit responses">
+                
+                <!-- Answer display -->
+                <h4>
+                  <div id="result"></div>
+                </h4>
+          </center>
+  </body>
+</html>

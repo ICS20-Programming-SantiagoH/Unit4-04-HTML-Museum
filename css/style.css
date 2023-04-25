@@ -1,0 +1,17 @@
+/* Created by: Santiago Hewett
+* Created on: Mar 2023
+* This CSS file defines the style for index.html
+* ICS2O-Unit4-04-HTML-Museum
+*/
+
+body {
+	background-color: #009dff;
+}
+
+h4 {
+  background-color: #ffa305;
+}
+
+h5 {
+  background-color: #f89e20;
+}
