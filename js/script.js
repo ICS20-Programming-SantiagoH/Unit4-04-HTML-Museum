@@ -11,36 +11,28 @@
 function enterClicked() {  
 
   // declaring age to go see movie variable
-  let ageToGoSeeMovie = "";
+  let priceForEntry = "";
   
   // Collecting user age 
-  let age = parseFloat(document.getElementById('age').value);
+  let age = parseInt(document.getElementById('age').value)
+  let dayOfTheWeek = document.getElementById('dayOfTheWeek').value;
+  
   
   //Display if user can watch r rated movies
-  if (age >= 18) {
-    ageToGoSeeMovie = "You can go see any movie you want by yourself."
+  if (age <= 5 || age >= 95) {
+    priceForEntry = "You can go enter for free."
   }
 
     // Display if user can watch PG or PG-13 movies
-  else if (age >= 13) { 
-    ageToGoSeeMovie = "You can't watch R rated movies by yourself, but you can watch anything else (PG, PG-13 or G)." 
-  }
-
-    // Display if user can watch G rated movies
-  else if (age >= 5) { 
-    ageToGoSeeMovie = "You can't watch R, PG-13 or PG rated movies by yourself, but you can watch G rated movies." 
-  }
-
-    // Display is user can't watch any movie by themselves
-  else if (age >= 0) { 
-    ageToGoSeeMovie = "You can't watch any movie by yourself, please enter a valid age." 
+  else if (age >= 12 && age <= 21 || dayOfTheWeek == "Tuesday" || dayOfTheWeek == "Thursday") { 
+    priceForEntry = "You get the student discount." 
   }
 
     // Display if user entered a non valid age
   else {
-    ageToGoSeeMovie = "Please enter a valid age."
+    priceForEntry = "You have to pay full price."
   }
   
   // Display results back to user
-  document.getElementById('result').innerHTML = ageToGoSeeMovie
+  document.getElementById('result').innerHTML = priceForEntry
 }
