@@ -10,25 +10,25 @@
  */
 function enterClicked() {  
 
-  // declaring age to go see movie variable
+  // declaring admission fee variable
   let priceForEntry = "";
   
-  // Collecting user age 
+  // Collecting user age and the day of the week
   let age = parseInt(document.getElementById('age').value)
   let dayOfTheWeek = document.getElementById('dayOfTheWeek').value;
   
   
-  //Display if user can watch r rated movies
+  //Display if user can enter the museum for free
   if (age <= 5 || age >= 95) {
     priceForEntry = "You can go enter for free."
   }
 
-    // Display if user can watch PG or PG-13 movies
+    // Display if user can get a discount
   else if (age >= 12 && age <= 21 || dayOfTheWeek == "Tuesday" || dayOfTheWeek == "Thursday") { 
     priceForEntry = "You get the student discount." 
   }
 
-    // Display if user entered a non valid age
+    // Display if user has to pay full price
   else {
     priceForEntry = "You have to pay full price."
   }
