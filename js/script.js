@@ -6,7 +6,7 @@
 
 "use strict";
 /**
- * This function tells the user if it is hot or cold
+ * This function tells the user what they have to pay to get in to the museum
  */
 function enterClicked() {  
 
@@ -20,7 +20,7 @@ function enterClicked() {
   
   //Display if user can enter the museum for free
   if (age <= 5 || age >= 95) {
-    priceForEntry = "You can go enter for free."
+    priceForEntry = "You can enter for free."
   }
 
     // Display if user can get a discount
@@ -29,8 +29,13 @@ function enterClicked() {
   }
 
     // Display if user has to pay full price
-  else {
+  else if (age >= 0 && age <=120) {
     priceForEntry = "You have to pay full price."
+  }
+
+    // Display if user has to enter a valid age
+  else {
+    priceForEntry = "Enter a valid age."
   }
   
   // Display results back to user
